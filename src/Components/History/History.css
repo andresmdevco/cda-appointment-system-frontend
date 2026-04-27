@@ -1,0 +1,40 @@
+.history-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Cambia aquí para alinear el contenido desde arriba */
+    height: 100vh;
+    background-size: cover;
+    color: #f5f5f5;  
+    text-align: center;
+    padding-top: 20px; /* Añade un poco de espacio en la parte superior si es necesario */
+}
+
+.history-wrapper h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    color: #fff;  
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra difuminada negra alrededor del texto */
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con algo de transparencia */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #3d63cc; /* Azul para encabezados */
+    color: white;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0); /* Celdas transparentes */
+}

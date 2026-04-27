@@ -1,0 +1,249 @@
+/* Scheduling Styles */
+.scheduling-wrapper {
+    background: rgba(0, 51, 102, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    width: 600px; /* Fijo para mantener consistencia */
+    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+}
+
+/* Home Styles */
+.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-button {
+    background-color: transparent; /* Color de fondo transparente */
+    color: white; /* Color de la letra blanca */
+    padding: 10px 20px;
+    border: 2px solid white; /* Borde blanco */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px; /* Tamaño de letra aumentado */
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco translúcido al pasar el mouse */
+    color: white;
+}
+
+.info-box {
+    display: flex;
+    background: rgba(0, 51, 102, 0.2);
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%; /* Ajusta según la necesidad del diseño */
+    height: auto; /* Cambiado para ser auto ajustable */
+    max-height: 65%; /* Altura máxima */
+    backdrop-filter: blur(60px);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 50px 40px; /* Aumenta el padding si es necesario */
+    text-align: left;
+}
+
+.info-box h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    margin-top: 0;
+    color: white; /* Color del texto blanco */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Sombra para mejorar la legibilidad */
+    text-align: center; /* Centrar el texto del título */
+}
+
+.info-box h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px; /* Tamaño de letra ajustado */
+    color: #00bcd4; /* Color cian */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 1); /* Sombra aumentada para mejorar la legibilidad */
+    margin-top: 0;
+    text-align: center; /* Centrar el texto del título */
+}
+
+.info-box p {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.schedule-button {
+    align-self: center;
+    width: 200px;
+    padding: 10px;
+    font-size: 18px; /* Tamaño de letra aumentado */
+    color: white; /* Color de la letra blanca */
+    background-color: transparent; /* Color de fondo transparente */
+    border: 2px solid white; /* Borde blanco */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.schedule-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco translúcido al pasar el mouse */
+    color: white;
+}
+
+/* React Datepicker Styles */
+.react-datepicker {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.react-datepicker__day--selected {
+    background-color: rgba(0, 122, 255, 0.8);
+    color: #fff;
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: rgba(0, 86, 179, 0.8);
+    color: #fff;
+}
+
+.react-datepicker__header {
+    background-color: rgba(0, 51, 102, 0.8);
+    border-bottom: none;
+}
+
+.react-datepicker__current-month {
+    color: #fff;
+}
+
+.react-datepicker__day-name {
+    color: #fff;
+}
+
+.react-datepicker__day {
+    color: #ddd;
+}
+
+.time-select {
+    margin-top: 20px;
+    margin-left: 20px; /* Espacio entre el calendario y la selección de hora */
+    width: 45%;
+    max-height: 300px; /* Altura máxima para la selección de tiempo */
+    overflow-y: auto; /* Permitir el desplazamiento vertical */
+}
+
+/* Estilizar la barra de desplazamiento */
+.time-select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.time-select::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.time-select::-webkit-scrollbar-thumb {
+    background: rgba(0, 122, 255, 0.8);
+    border-radius: 10px;
+}
+
+.time-select::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 122, 255, 1);
+}
+
+.time-select-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-slot {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: rgba(0, 86, 179, 0.7);
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 122, 255, 0.8);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.time-slot:hover {
+    background-color: rgba(0, 122, 255, 0.8);
+}
+
+.time-slot.disabled {
+    background-color: rgba(102, 102, 102, 0.6);
+    color: #999;
+    cursor: not-allowed;
+}
+
+.time-slot.selected {
+    background-color: rgba(0, 204, 255, 0.8);
+    color: #fff;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 12px 24px;
+    background-color: rgba(0, 86, 179, 0.7); /* Color similar al de los selectores de hora */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+}
+
+.buttons button:hover {
+    background-color: rgba(0, 122, 255, 0.8); /* Color similar al de los selectores de hora */
+    transform: scale(1.05);
+}
+
+.buttons button:disabled {
+    background-color: rgba(204, 204, 204, 0.6);
+    cursor: not-allowed;
+    transform: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center; /* Centrar el texto del título */
+}
