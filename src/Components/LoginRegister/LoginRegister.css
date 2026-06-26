@@ -1,124 +1,329 @@
-.wrapper {
-    position: relative;
-    width: 420px;
-    height: 450px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .1);
-    backdrop-filter: blur(30px);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    transition: height .2s ease;
+/* ─── Reset y página completa ────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.wrapper.active {
-    height: 520px;
+html, body, #root {
+  width: 100%;
+  height: 100%;
 }
 
-.wrapper .form-box{
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ─── Contenedor principal — ocupa todo el viewport ─ */
+.auth-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ─── Panel izquierdo (marca) ─────────────────────── */
+.auth-left {
+  flex: 1;
+  background: linear-gradient(145deg, #0f2027 0%, #1a3a4a 55%, #0d2d3d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 52px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Destellos de fondo */
+.auth-left::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 180, 150, 0.15) 0%, transparent 70%);
+  top: -120px;
+  right: -120px;
+}
+.auth-left::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 120, 200, 0.12) 0%, transparent 70%);
+  bottom: -100px;
+  left: -100px;
+}
+
+.cda-logo-box {
+  width: 88px;
+  height: 88px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5ee8c8;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.cda-logo-box svg {
+  font-size: 44px;
+}
+
+.cda-brand {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cda-brand h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  margin: 0 0 6px;
+}
+
+.cda-brand p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.cda-divider {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, #5ee8c8, #3b8fd4);
+  border-radius: 2px;
+  margin: 28px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cda-tagline {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  line-height: 1.7;
+  max-width: 260px;
+  position: relative;
+  z-index: 1;
+}
+
+.cda-features {
+  list-style: none;
+  padding: 0;
+  margin: 36px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 280px;
+  position: relative;
+  z-index: 1;
+}
+
+.cda-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+
+.cda-features li svg {
+  color: #5ee8c8;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.cda-features li span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ─── Panel derecho (formulario) ─────────────────── */
+.auth-right {
+  width: 480px;
+  flex-shrink: 0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 56px;
+}
+
+/* Tabs */
+.auth-tabs {
+  display: flex;
+  width: 100%;
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 5px;
+  margin-bottom: 36px;
+}
+
+.auth-tabs button {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.auth-tabs button.active {
+  background: #ffffff;
+  color: #111;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario */
+.auth-form {
+  width: 100%;
+}
+
+.auth-form h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+/* Campos */
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 7px;
+  letter-spacing: 0.02em;
+}
+
+.field-inner {
+  position: relative;
+}
+
+.field-inner input {
+  width: 100%;
+  height: 46px;
+  padding: 0 44px 0 16px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fafaf8;
+  color: #111;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-sizing: border-box;
+}
+
+.field-inner input::placeholder {
+  color: #bbb;
+}
+
+.field-inner input:focus {
+  border-color: #3b8fd4;
+  box-shadow: 0 0 0 3px rgba(59, 143, 212, 0.12);
+  background: #fff;
+}
+
+.field-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #ccc;
+  pointer-events: none;
+}
+
+/* Botón principal */
+.submit-btn {
+  width: 100%;
+  height: 48px;
+  margin-top: 12px;
+  background: #0f2027;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.submit-btn:hover {
+  background: #1a3a4a;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Link para cambiar entre vistas */
+.switch-link {
+  margin-top: 22px;
+  font-size: 13.5px;
+  color: #aaa;
+  text-align: center;
+}
+
+.switch-link span {
+  color: #3b8fd4;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switch-link span:hover {
+  text-decoration: underline;
+}
+
+/* ─── Responsivo ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .auth-page {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .auth-left {
+    padding: 48px 32px;
+    flex: none;
+  }
+
+  .cda-features {
+    display: none;
+  }
+
+  .auth-right {
     width: 100%;
-    padding: 40px;
-}
-
-.wrapper .form-box.login {
-    transition: translate .18s ease;
-    translate: 0;
-}
-
-.wrapper.active .form-box.login {
-    transition: none;
-    translate: -400px;
-}
-
-.wrapper .form-box.register {
-    position: absolute;
-    transition: none;
-    translate: 400px;
-}
-
-.wrapper.active .form-box.register {
-    transition: translate .18s ease;
-    translate: 0;
-}
-
-form h1{
-    font-size: 36px;
-    text-align: center;
-}
-
-form .input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
-}
-
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 45px 20px 20px;
-}
-
-.input-box input::placeholder{
-    color: #fff;
-}
-
-.input-box .icon{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    translate: 0 -50%;
-    font-size: 16px;
-}
-
-form .remember-forgot{
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
-}
-
-.remember-forgot label input{
-    accent-color: #fff;
-    margin-right: 4px;
-}
-
-form button {
-    width: 100%;
-    height: 45px;
-    background: #fff;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 700;
-}
-
-for .register-link {
-    font-size: 14.5px;
-    text-align: center;
-    margin: 20px 0 15px;
-}
-
-.register-link p a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.register-link p a:hover {
-    text-decoration: underline;
+    padding: 40px 28px;
+  }
 }
