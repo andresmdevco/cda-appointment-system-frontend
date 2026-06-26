@@ -26,6 +26,7 @@ const LoginRegister = () => {
             );
             localStorage.setItem("token", response.data.accessToken);
             localStorage.setItem("user_id", response.data.user_id);
+            localStorage.setItem('user_name', response.data.user_name)
             window.location.href = "/home";
         } catch {
             alert("Correo o contraseña incorrectos.");
