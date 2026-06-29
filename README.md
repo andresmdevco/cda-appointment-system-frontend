@@ -9,16 +9,6 @@ Sistema de agendamiento de citas para un Centro de Diagnóstico Automotor (CDA).
 
 ---
 
-## 📋 Tabla de contenido
-
-- [Descripción](#-descripción)
-- [Tecnologías](#-tecnologías)
-- [Vistas](#-vistas)
-- [Instalación y uso](#-instalación-y-uso)
-- [Variables de entorno](#-variables-de-entorno)
-
----
-
 ## 📌 Descripción
 
 Interfaz web de CDA Pradera con diseño de dos paneles: panel izquierdo oscuro con identidad de marca y panel derecho blanco para contenido. Incluye autenticación con JWT, rutas protegidas y un flujo de agendamiento con calendario personalizado y selección de horarios disponibles.
