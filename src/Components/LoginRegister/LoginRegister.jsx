@@ -18,7 +18,7 @@ const LoginRegister = () => {
         e.preventDefault();
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/auth/login",
+                `${process.env.REACT_APP_BACKEND_URL}/auth/login`,
                 {
                     email: loginEmail,
                     password: loginPassword,
@@ -37,7 +37,7 @@ const LoginRegister = () => {
         e.preventDefault();
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/users",
+                `${process.env.REACT_APP_BACKEND_URL}/users`,
                 {
                     name: registerUsername,
                     email: registerEmail,

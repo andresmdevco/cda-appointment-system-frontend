@@ -11,7 +11,7 @@ const History = () => {
     const user_id = localStorage.getItem('user_id');
     if (user_id) {
       axios
-        .get(`http://localhost:5000/api/appointments/history/${user_id}`)
+        .get(`${process.env.REACT_APP_BACKEND_URL}/appointments/history/${user_id}`)
         .then((res) => setAppointments(res.data))
         .catch((err) => console.error('Error fetching appointments:', err));
     }

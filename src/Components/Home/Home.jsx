@@ -30,7 +30,7 @@ const Home = () => {
     useEffect(() => {
         setUserName(localStorage.getItem("user_name") || "");
         axios
-            .get("http://localhost:5000/api/appointments/reserved-dates")
+            .get(`${process.env.REACT_APP_BACKEND_URL}/appointments/reserved-dates`)
             .then((res) =>
                 setReservedDates(
                     res.data.map((a) => ({
@@ -142,7 +142,7 @@ const Home = () => {
         }
         try {
             const res = await axios.post(
-                "http://localhost:5000/api/appointments",
+                `${process.env.REACT_APP_BACKEND_URL}/appointments`,
                 {
                     user_id,
                     name: nombre,
@@ -152,7 +152,7 @@ const Home = () => {
                 },
             );
 
-            await axios.post("http://localhost:5000/api/appointments/history", {
+            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/appointments/history`, {
                 user_id,
                 name: nombre,
                 cel_notification: telefono,
