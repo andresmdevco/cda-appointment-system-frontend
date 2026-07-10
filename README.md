@@ -11,7 +11,6 @@ Sistema de agendamiento de citas para un Centro de Diagnóstico Automotor (CDA).
 ---
  
 ## 🌐 Demo
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2e93a973-ecff-4bde-8e49-449195151cd4/deploy-status)](https://app.netlify.com/projects/cda-pradera/deploys)
  
 [https://cda-pradera.netlify.app](https://cda-pradera.netlify.app)
  
