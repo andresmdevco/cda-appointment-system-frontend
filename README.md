@@ -6,13 +6,13 @@ Sistema de agendamiento de citas para un Centro de Diagnóstico Automotor (CDA).
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
-![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
  
 ---
  
 ## 🌐 Demo
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
  
-[https://cda-pradera.netlify.app](https://cda-pradera.netlify.app)
+[https://cda-pradera.vercel.app/](https://cda-pradera.vercel.app/)
  
 > **Nota:** el backend está desplegado en Render con plan gratuito. La primera petición puede tardar unos segundos si el servicio estuvo inactivo.
 ---
