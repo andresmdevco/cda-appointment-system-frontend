@@ -1,39 +1,28 @@
 # 🚗 CDA Pradera — Frontend
 
-Sistema de agendamiento de citas para un Centro de Diagnóstico Automotor (CDA). Aplicación web construida con React que permite a los usuarios registrarse, iniciar sesión y gestionar sus citas de revisión técnico-mecánica vehicular.
+Sistema de agendamiento de citas para un Centro de Diagnóstico Automotor (CDA). Aplicación web construida con React que permite a los usuarios registrarse, iniciar sesión y gestionar sus citas de revisión técnico-mecánica vehicular. La interfaz utiliza un diseño de dos paneles: panel izquierdo oscuro con identidad de marca y panel derecho blanco para contenido, e incluye autenticación con JWT, rutas protegidas y un flujo de agendamiento con calendario personalizado y selección de horarios disponibles.
 
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
- 
----
+> **Nota:** El backend está desplegado en Render con plan gratuito. La primera petición puede tardar unos segundos si el servicio estuvo inactivo.
  
 ## 🌐 Demo
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
  
 [https://cda-pradera.vercel.app/](https://cda-pradera.vercel.app/)
+
+
+## 🛠️ Tecnologías Usadas
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
  
-> **Nota:** el backend está desplegado en Render con plan gratuito. La primera petición puede tardar unos segundos si el servicio estuvo inactivo.
----
+- **React 18**
+  
+Además:
+- **React Router DOM** — enrutamiento del lado del cliente
+- **react-icons** — íconos de interfaz (FaCar, MdCalendarToday, etc.)
 
-## 📌 Descripción
-
-Interfaz web de CDA Pradera con diseño de dos paneles: panel izquierdo oscuro con identidad de marca y panel derecho blanco para contenido. Incluye autenticación con JWT, rutas protegidas y un flujo de agendamiento con calendario personalizado y selección de horarios disponibles.
-
----
-
-## 🛠️ Tecnologías
-
-| Tecnología | Uso |
-|---|---|
-| React 18 | Librería principal de UI |
-| React Router DOM | Enrutamiento del lado del cliente |
-| Axios | Peticiones HTTP al backend |
-| react-icons | Íconos de interfaz (FaCar, MdCalendarToday, etc.) |
-| CSS3 | Estilos personalizados por componente |
-
----
 
 ## 🖥️ Vistas
 
@@ -55,9 +44,8 @@ Interfaz web de CDA Pradera con diseño de dos paneles: panel izquierdo oscuro c
 - Botón para volver al home
 - Mensaje de estado vacío cuando no hay citas registradas
 
----
 
-## ⚙️ Instalación y uso
+## 🚀 Como ejecutar el proyecto
 
 1. Clonar el repositorio:
 
@@ -84,7 +72,6 @@ npm start
 
 La aplicación quedará disponible en `http://localhost:3000`.
 
----
 
 ## 🔐 Variables de entorno
 
